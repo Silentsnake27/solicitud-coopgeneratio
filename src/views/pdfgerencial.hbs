@@ -1,0 +1,235 @@
+<style type="text/css">
+   body {
+      color: rgb(25, 68, 90);
+      margin: 0;
+      padding: 0;
+   }
+
+   a {
+      color: rgb(0, 26, 255);
+   }
+
+
+   .form-control {
+      border: none;
+      border-bottom: 0.9px solid;
+      color: rgb(25, 68, 90);
+      border-color: rgb(25, 68, 90);
+      font-size: 0.8rem;
+
+   }
+
+   .form-control2 {
+      border: none;
+      border-bottom: 0.9px solid;
+      margin-left: 31%;
+      color: rgb(25, 68, 90);
+      border-color: rgb(25, 68, 90);
+
+   }
+
+      {
+         {
+          !-- .form-control1 {
+            border: none;
+            border-bottom: 1px solid;
+
+            color: rgb(25, 68, 90);
+            border-color: rgb(25, 68, 90);
+         }
+
+         --
+      }
+   }
+
+   h3 {
+      color: rgb(25, 68, 90);
+      margin: 18px;
+      font-size: 17px;
+      text-align: center;
+      text-transform: uppercase;
+
+   }
+
+   p {
+      text-align: center;
+      width: 77%;
+      margin: auto;
+      font-size: 0.9rem;
+   }
+
+   .p-footer {
+      text-align: center;
+      width: 80%;
+      margin: auto;
+      font-size: 0.8rem;
+      padding-top: 50px;
+   }
+
+   .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 77%;
+      padding-left: 100px;
+   }
+
+   .row-p {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      padding-left: 102px;
+      font-size: 0.8rem;
+      padding-bottom: 3px;
+   }
+
+   .row-p1 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 77%;
+      padding-left: 100px;
+      font-size: 0.8rem;
+      padding-bottom: 3px;
+   }
+
+   .row-p2 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      padding-left: 100px;
+      font-size: 0.8rem;
+
+         {
+            {
+             !-- padding-bottom: 3px;
+            --
+         }
+      }
+   }
+
+
+
+   label {
+      font-size: 0.8rem;
+      padding-left: 0.2rem;
+   }
+
+   .input-date {
+      margin-top: 20px;
+      margin-bottom: 4px;
+
+   }
+
+   .col-form-label1 {
+      width: 77%;
+      padding-left: 100px;
+   }
+
+   .col-form-label2 {
+      padding-left: 501px;
+
+   }
+
+   .col-form-label4 {
+      padding-right: 0.4rem;
+
+   }
+
+   .col-form-label5 {
+
+      padding-left: 36%;
+   }
+
+   .div-img {
+         {
+            {
+             !-- background: gray;
+            --
+         }
+      }
+
+      width: 100%;
+   }
+
+   img {
+      width: 88%;
+      height: auto;
+      margin: auto;
+      display: block;
+      padding-left: 23px;
+      padding-right: 13px;
+      padding-top: 13px;
+   }
+</style>
+
+<script type="text/javascript">
+   window.onload = function () {
+      var fecha = new Date(); //Fecha actual
+      var mes = fecha.getMonth() + 1; //obteniendo mes
+      var dia = fecha.getDate(); //obteniendo dia
+      var ano = fecha.getFullYear(); //obteniendo año
+      if (dia < 10)
+         dia = '0' + dia; //agrega cero si el menor de 10
+      if (mes < 10)
+         mes = '0' + mes //agrega cero si el menor de 10
+      document.getElementById('fechaActual').value = ano + "-" + mes + "-" + dia;
+   }
+</script>
+<div class="div-img">
+
+   <img class="img" src="http://img.fenixzone.net/i/TkCqP89.jpeg" alt="logo-registro-coopgeneratio" border="0">
+
+</div>
+
+{{!-- <label class="col-sm-0 col-form-label2">FECHA:</label>
+<input class="form-control input-date" type="date" name="" id="fechaActual" value="" required=""> --}}
+
+
+<div class="">
+
+
+   <h3>SOLICITUD DE GERENCIAL</h3>
+   {{!-- <div class="row-p">
+
+      Por este medio solicito al Consejo de Administración ser admitido como socio de la Cooperativa de
+      Ahorro, Crédito y Servicios Múltiples GENERATIO NOVA “COOPGENERATIO”, para lo cual
+      me comprometo a cumplir con las disposiciones vigentes de los Estatutos y la Ley 127 sobre
+      asociaciones cooperativas y sus reglamentos.
+
+   </div> --}}
+   <br>
+
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Nombres:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="60" value="{{nombre}} {{apellido}}"
+      required="">
+
+   <label class="col-sm-12 col-form-label4">Apellidos:</label>
+   <input class="form-control" type="text" name="apellido" id="nombre" size="38" value="{{apellido}}" required="">
+
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Cédula:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="60" value="{{cedula}}" required="">
+
+
+   <label class="col-sm-12 col-form-label4">Código:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="20" value="{{codigo}}" required="">
+</div>
+
+<div class="row">
+
+
+   {{!-- </div> --}}
+{{!-- <div class="row"> --}}
+   <label class="col-sm-12 col-form-label4">Celular:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="33" value="{{celular}}" required="">
+
+   {{!-- <label class="col-sm-12 col-form-label4">Telefonos:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="24" value="{{telefonos}}" required=""> --}}
+
+</div>
+
+{{!-- heroku version --}}

@@ -1,5 +1,4 @@
 ngrok.exe
 node_modules
-src
 .dockerignore
 Dockerfile
