@@ -49,6 +49,8 @@ const SolicitudSucursal = async function(req, res) {
   });
 };
 
+
+
 // Function para Mail de confirmación de solicitud
 
 export async function solicitudmail(req, res, user) {

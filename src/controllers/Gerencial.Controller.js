@@ -164,7 +164,7 @@ export async function SolicitudGerencial(req, res) {
           }
   
           try {
-            mail.SolicitudSucursal(req, res);
+            mail.SolicitudGerencial(req, res);
   
           } catch (e) {
             
