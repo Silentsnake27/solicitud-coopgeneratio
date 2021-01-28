@@ -1,6 +1,8 @@
 import { Router } from "express";
 const router = Router();
 
+import {SolicitudGerencial} from '../controllers/Gerencial.Controller';
+
 router.get("/gerencial", (req, res) => {
   var token = req.cookies["SystemAuth"];
   if (req.cookies["SystemAuth"]) {
@@ -14,5 +16,7 @@ router.get("/gerencial", (req, res) => {
   var token = req.cookies["SystemAuth"];
   res.render("gerencial", { token, admin });
 });
+
+router.post('/gerencial', SolicitudGerencial)
 
 module.exports  = router;
