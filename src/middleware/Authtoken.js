@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 module.exports = function (req,res,next) {
   
-    if (req.path != '/login' && req.path != '/signup' && req.path != '/' && req.path != '/form' && req.path != '/logout' && req.path != '/adminlogin') {
+    if (req.path != '/login' && req.path != '/signup' && req.path != '/' && req.path != '/form' && req.path != '/gerencial' && req.path != '/logout' && req.path != '/adminlogin') {
         if (req.cookies['SystemAuth']) {
 
               

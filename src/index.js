@@ -80,6 +80,7 @@ app.use((req,res,next)=> {
   app.use(Authtoken);
 
   // routes
+  app.use(require('./routes/gerencial'));
   app.use(require('./routes/form'));
   app.use(require('./routes/logout'));
   app.use(require('./routes/signup'));
