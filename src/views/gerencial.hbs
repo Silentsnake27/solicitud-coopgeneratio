@@ -11,7 +11,7 @@
       <h4 class="card-title">Solicitud Gerencial</h4>
     </div>
     <div class="card-body ">
-      <form action="/form" class="form-horizontal" id="needs-validation" novalidate method="POST" onsubmit="return submitUserForm();">
+      <form action="/gerencial" class="form-horizontal" id="needs-validation" novalidate method="POST" onsubmit="return submitUserForm();">
        <div class="row">
           <div class="col-6 col-lg-6 col-md-6">
             <label class="col-sm-0 col-form-label">Nombres:</label>
@@ -64,18 +64,53 @@
           </div>
         </div>
 
-        <div class="row">
+        {{!-- <div class="row">
             <div class="col-12 col-lg-6 col-md-10 m-auto">
                 <label class="col-sm-12 text-center col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
                 <div class="form-group bmd-form-group">
                     <input type="text" name="monto" class="form-control" minlength="3" value="{{monto}}"
                         placeholder="" required="">
                     <div class="invalid-feedback">
-                        Ingresa una Dirección
+                        Ingresa un monto
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="row">
+            <div class="col-6 col-lg-6 col-md-6 m-auto">
+                <label class="col-sm-0 col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
+                <div class="form-group bmd-form-group">
+                    <input class="form-control" type="text" id="monto" name="monto" value="{{monto}}"
+                        placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Ingresa un monto
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-6 col-md-6">
+                <label class="col-sm-0 col-form-label">Plazo:</label>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="plazo" id="plazo" value="{{plazo}}" required="">
+                    <div class="invalid-feedback">
+                        Ingresa el plazo a pagar
                     </div>
                 </div>
             </div>
         </div>
+        
+            <div class="row">
+                <div class="col-6 col-lg-12 col-md-6">
+                    <label class="col-sm-0 col-form-label">No. De Cuenta Banreservas:</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="cuenta" id="cuenta" value="{{cuenta}}" required="">
+                        <div class="invalid-feedback">
+                            Ingresa un numero de cuenta
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         {{!-- <div class="row">
             <div class="col-12 col-lg-6 col-md-10 m-auto">

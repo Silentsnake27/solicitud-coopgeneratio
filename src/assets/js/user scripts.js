@@ -142,6 +142,20 @@ ahorro.addEventListener("keyup", function(){
     ahorro.value = ahorro.value.replace(regex,"");
 })
 
+var monto = document.getElementById("monto");
+
+monto.addEventListener("keyup", function(){
+    if (monto.value == ""){
+     
+    }
+    new Cleave('#monto', {
+      numeral: true,
+      // numeralDecimalMark: ','
+      delimiter: ','
+  });
+    monto.value = monto.value.replace(regex,"");
+})
+
 // var headers = new Headers();
 // headers.append('Content-Type', 'application/json');
 // headers.append('Accept', 'application/json');
