@@ -6,8 +6,17 @@
     background-attachment: fixed;
   }
 
-  .custom-container {
-    width: 70% !important;
+  @media(min-width: 1000px) {
+    .custom-container {
+      width: 70% !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
   }
 </style>
 <div class="container custom-container">
@@ -92,7 +101,7 @@
 
           <div class="row">
             <div class="col-6 col-lg-6 col-md-6 m-auto">
-              <label class="col-sm-0 col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
+              <label class="col-sm-0 col-form-label">Monto:</label>
               <div class="form-group bmd-form-group">
                 <input class="form-control" type="text" id="monto" name="monto" value="{{monto}}" placeholder=""
                   required="">
@@ -103,7 +112,7 @@
             </div>
 
             <div class="col-6 col-lg-6 col-md-6">
-              <label class="col-sm-0 col-form-label">Plazo a pagar:</label>
+              <label class="col-sm-0 col-form-label">Cuotas:</label>
               <div class="form-group">
                 <input class="form-control" type="text" name="plazo" id="plazo" value="{{plazo}}" required="">
                 <div class="invalid-feedback">
@@ -115,7 +124,7 @@
 
           <div class="row">
             <div class="col-6 col-lg-12 col-md-6">
-              <label class="col-sm-0 col-form-label">No. De Cuenta Banreservas:</label>
+              <label class="col-sm-0 col-form-label">Mi cuenta es:</label>
               <div class="form-group">
                 <input class="form-control" type="text" name="cuenta" id="cuenta" value="{{cuenta}}" required="">
                 <div class="invalid-feedback">
@@ -139,16 +148,16 @@
 
           <div class="row justify-content-center">
             <div class="col-6 col-sm-6 col-md-6">
-              <label class="col-12 col-sm-12 col-lg-12 col-form-label text-center">Selecione la Sucursal a enviar:</label>
+              <label class="col-12 col-sm-12 col-lg-12 col-form-label text-center">Oficina:</label>
               <div class="row justify-content-center">
                 <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
                   <select class="selectpicker" data-size="7" name="sucursal" data-style="select-with-transition"
                     title="Single Select">
-                 <option value="" disabled selected>Seleccionar</option>
-                  <option value="Santo Domingo">Santo Domingo</option>
-                  <option value="Santiago">Santiago</option>
-                  <option value="Constanza">Constanza</option>
-                  <option value="San Francisco">San Francisco</option>
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Santo Domingo">Santo Domingo</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="Constanza">Constanza</option>
+                    <option value="San Francisco">San Francisco</option>
                     <div class="invalid-feedback">
                       Ingresa la Sucursal
                     </div>
@@ -157,6 +166,13 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <hr>
+
+          <div class="row-p1">
+
+            <p>Yo ACUERDO, ME COMPROMETO y ME OBLIGO a pagar y reconocer como deuda los  depósitos realizados desde la cuenta de la Cooperativa de Ahorro, Crédito y Servicio Múltiples “Generatio Nova" COOPGENERATIO, Inc., a la Cuenta del Banco supraindicado.</p>
           </div>
 
           {{!-- <div class="row">
@@ -184,12 +200,12 @@
             </div>
           </div>
           --}}
-          <br><br>
+          {{!-- <br><br> --}}
           {{!-- <div class="text-lg-center">
             <div class="g-recaptcha" data-sitekey="6Lc7Q7MUAAAAAL_yLBT4I7m-k09edUV97VjHoZT_"
               data-expired-callback="capcha_expired" name="captcha " id="captcha" data-callback="verifyCaptcha"></div>
             <div id="g-recaptcha-error"></div>
-            
+
           </div> --}}
           <br><br>
           <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal"
