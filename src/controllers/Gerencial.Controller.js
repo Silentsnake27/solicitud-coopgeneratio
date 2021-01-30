@@ -27,8 +27,19 @@ export async function GerencialController(req, res) {
   //   }
   // });
 
-    const { nombre, apellido, cedula, codigo, celular, monto, plazo, cuenta } = req.body;
-    console.log(req.body);
+  const {
+    nombre,
+    apellido,
+    cedula,
+    codigo,
+    celular,
+    monto,
+    plazo,
+    cuenta,
+    motivo,
+    sucursal,
+  } = req.body;
+  console.log(req.body);
 
   let errors = [];
   //nombre validations
@@ -83,13 +94,25 @@ export async function GerencialController(req, res) {
     errors.push({
       text: "El Monto es necesario",
     });
-    }
-    
-    if (!cuenta) {
-        errors.push({
-          text: "El Monto es necesario",
-        });
-      }
+  }
+
+  if (!cuenta) {
+    errors.push({
+      text: "El Monto es necesario",
+    });
+  }
+
+  if (!motivo) {
+    errors.push({
+      text: "El Monto es necesario",
+    });
+  }
+
+  if (!sucursal) {
+    errors.push({
+      text: "El Monto es necesario",
+    });
+  }
 
   //errors validations
   if (errors.length > 0) {
@@ -104,7 +127,8 @@ export async function GerencialController(req, res) {
       monto,
       plazo,
       cuenta,
-      motivo
+      motivo,
+      sucursal,
     });
   } else {
     // // Look for cedula coincidence

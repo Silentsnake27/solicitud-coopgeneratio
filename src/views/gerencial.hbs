@@ -152,7 +152,7 @@
               <div class="row justify-content-center">
                 <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
                   <select class="selectpicker" data-size="7" name="sucursal" data-style="select-with-transition"
-                    title="Single Select">
+                    title="Single Select" required="">
                     <option value="" disabled selected>Seleccionar</option>
                     <option value="Santo Domingo">Santo Domingo</option>
                     <option value="Santiago">Santiago</option>
@@ -173,14 +173,20 @@
           <div class="row-p1">
 
             <p></p>
-                                    <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value=""> Yo ACUERDO, ME COMPROMETO y ME OBLIGO a pagar y reconocer como deuda los  depósitos realizados desde la cuenta de la Cooperativa de Ahorro, Crédito y Servicio Múltiples “Generatio Nova" COOPGENERATIO, Inc., a la Cuenta del Banco supraindicado.
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" required> Yo ACUERDO, ME COMPROMETO y ME OBLIGO
+                a pagar
+                y reconocer como deuda los depósitos realizados desde la cuenta de la Cooperativa de Ahorro, Crédito y
+                Servicio Múltiples “Generatio Nova" COOPGENERATIO, Inc., a la Cuenta del Banco supraindicado.
+                <span class="form-check-sign">
+                  <span class="check"></span>
+                </span>
+                <div class="invalid-feedback text-center">
+                  Marque la casilla de verificación
+                </div>
+              </label>
+            </div>
           </div>
 
           {{!-- <div class="row">
@@ -216,31 +222,10 @@
 
           </div> --}}
           <br><br>
-          <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal"
+          <button type="submit" class="btn btn-green btn-round col text-center" data-toggle="modal"
             data-target="#myModal10">
             Enviar Solicitud
           </button>
-          <!-- small modal -->
-          <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-small">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                      class="material-icons">clear</i></button>
-                </div>
-                <div class="modal-body">
-                  <p>Esta Seguro de Enviar la Solicitud</p>
-                </div>
-                <div class="modal-footer justify-content-center">
-                  <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
-                  <button type="submit" class="btn btn-success btn-link">Si
-                    <div class="ripple-container"></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </form>
       </div>
       <div class="card-footer ">
