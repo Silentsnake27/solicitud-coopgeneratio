@@ -1,173 +1,226 @@
-<style type="text/css">  body{   background-image: url('/img/bg3.jpg');  background-position:center;  background-repeat:repeat;  background-attachment:fixed;  } .custom-container{
+<style type="text/css">
+  body {
+    background-image: url('/img/bg3.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  .custom-container {
     width: 70% !important;
-}  </style>
+  }
+</style>
 <div class="container custom-container">
-<div class=" col-auto col-md-auto col-lg-12">
-  <div class="card ">
-    <div class="card-header card-header-rose card-header-icon">
-      <div class="card-icon1">
-        <i class="material-icons">contacts</i>
-      </div>
-      <h4 class="card-title">Solicitud Gerencial</h4>
-    </div>
-    <div class="card-body ">
-      <form action="/gerencial" class="form-horizontal" id="needs-validation" novalidate method="POST" onsubmit="return submitUserForm();">
-       <div class="row">
-          <div class="col-6 col-lg-6 col-md-6">
-            <label class="col-sm-0 col-form-label">Nombres:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="nombre" id="nombre" minlength="3" value="{{nombre}}" required="">
-               <div class="invalid-feedback">
-        Ingresa un Nombre
-      </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-6 col-md-6">
-            <label class="col-sm-0 col-form-label">Apellidos:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="apellido" id="apellido" class="form-control" minlength="3" value="{{apellido}}" placeholder="" required="">
-               <div class="invalid-feedback">
-        Ingresa un apellido
-      </div>
-            </div>
-          </div>
+  <div class=" col-auto col-md-auto col-lg-12">
+    <div class="card ">
+      <div class="card-header card-header-rose card-header-icon">
+        <div class="card-icon1">
+          <i class="material-icons">contacts</i>
         </div>
-        <div class="row">
-          <div class="col-6 col-lg-6">
-            <label class="col-auto col-md-auto col-sm-auto col-form-label">Cédula</label>
-            <div class="form-group">
-              <input class="form-control" type="text" id="cedula" name="cedula" value="{{cedula}}" required="">
-               <div class="invalid-feedback">
-        Ingresa la Cedula
+        <h4 class="card-title">Solicitud Gerencial</h4>
       </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-            <label class="col-auto col-sm-auto col-lg-auto col-form-label">Código:</label>
-            <div class="form-group">
-                <input class="form-control" type="text" id="codigo" name="codigo" value="{{codigo}}" required="">
-                 <div class="invalid-feedback">
-        Ingresa la Cedula
-      </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-lg-12 col-md-6">
-            <label class="col-sm-0 col-form-label">Célular:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="celular" id="celular" value="{{celular}}" required="">
+      <div class="card-body ">
+        <form action="/gerencial" class="form-horizontal" id="needs-validation" novalidate method="POST"
+          onsubmit="return submitUserForm();">
+          <div class="row">
+            <div class="col-6 col-lg-6 col-md-6">
+              <label class="col-sm-0 col-form-label">Nombres:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="nombre" id="nombre" minlength="3" value="{{nombre}}"
+                  required="">
                 <div class="invalid-feedback">
-        Ingresa un Célular
-      </div>
+                  Ingresa un Nombre
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6">
+              <label class="col-sm-0 col-form-label">Apellidos:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="apellido" id="apellido" class="form-control" minlength="3" value="{{apellido}}"
+                  placeholder="" required="">
+                <div class="invalid-feedback">
+                  Ingresa un apellido
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        {{!-- <div class="row">
-            <div class="col-12 col-lg-6 col-md-10 m-auto">
-                <label class="col-sm-12 text-center col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
-                <div class="form-group bmd-form-group">
-                    <input type="text" name="monto" class="form-control" minlength="3" value="{{monto}}"
-                        placeholder="" required="">
-                    <div class="invalid-feedback">
-                        Ingresa un monto
-                    </div>
+          <div class="row">
+            <div class="col-6 col-lg-6">
+              <label class="col-auto col-md-auto col-sm-auto col-form-label">Cédula</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="cedula" name="cedula" value="{{cedula}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa la Cedula
                 </div>
+              </div>
             </div>
-        </div> --}}
-
-        <div class="row">
-            <div class="col-6 col-lg-6 col-md-6 m-auto">
-                <label class="col-sm-0 col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
-                <div class="form-group bmd-form-group">
-                    <input class="form-control" type="text" id="monto" name="monto" value="{{monto}}"
-                        placeholder="" required="">
-                    <div class="invalid-feedback">
-                        Ingresa un monto
-                    </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+              <label class="col-auto col-sm-auto col-lg-auto col-form-label">Código:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="codigo" name="codigo" value="{{codigo}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa la Cedula
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-lg-12 col-md-6">
+              <label class="col-sm-0 col-form-label">Célular:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="celular" id="celular" value="{{celular}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa un Célular
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {{!-- <div class="row">
+            <div class="col-12 col-lg-6 col-md-10 m-auto">
+              <label class="col-sm-12 text-center col-form-label">Deseo solicitar un Préstamo Gerencial por un monto
+                de:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="monto" class="form-control" minlength="3" value="{{monto}}" placeholder=""
+                  required="">
+                <div class="invalid-feedback">
+                  Ingresa un monto
+                </div>
+              </div>
+            </div>
+          </div> --}}
+
+          <div class="row">
+            <div class="col-6 col-lg-6 col-md-6 m-auto">
+              <label class="col-sm-0 col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
+              <div class="form-group bmd-form-group">
+                <input class="form-control" type="text" id="monto" name="monto" value="{{monto}}" placeholder=""
+                  required="">
+                <div class="invalid-feedback">
+                  Ingresa un monto
+                </div>
+              </div>
             </div>
 
             <div class="col-6 col-lg-6 col-md-6">
-                <label class="col-sm-0 col-form-label">Plazo:</label>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="plazo" id="plazo" value="{{plazo}}" required="">
-                    <div class="invalid-feedback">
-                        Ingresa el plazo a pagar
-                    </div>
+              <label class="col-sm-0 col-form-label">Plazo a pagar:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="plazo" id="plazo" value="{{plazo}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa el plazo a pagar
                 </div>
+              </div>
             </div>
-        </div>
-        
-            <div class="row">
-                <div class="col-6 col-lg-12 col-md-6">
-                    <label class="col-sm-0 col-form-label">No. De Cuenta Banreservas:</label>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="cuenta" id="cuenta" value="{{cuenta}}" required="">
-                        <div class="invalid-feedback">
-                            Ingresa un numero de cuenta
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
 
-        {{!-- <div class="row">
-            <div class="col-12 col-lg-6 col-md-10 m-auto">
-                <label class="col-sm-12 text-center col-form-label">Deseo solicitar un Préstamo Gerencial por un monto de:</label>
-                <div class="row col-12 col-lg-6 col-md-10 m-auto justify-content-center">
-                <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
-                    <select class="selectpicker" data-size="7" name="estadocivil" data-style="select-with-transition"
-                        title="Single Select">
-                        <option value="" disabled selected>Seleccionar</option>
-                        <option value="refinanciamiento">ES UN REFINANCIAMIENTO</option>
-                        <option value="1">RD$7,000</option>
-                        <option value="2">RD$8,000</option>
-                        <option value="3">RD$9,000</option>
-                        <option value="4">RD$10,000</option>
-                        <option value="5">RD$50,000</option>
-                        <option value="6"></option>
-                        <div class="invalid-feedback">
-                            Ingresa Estado Civil
-                        </div>
-                    </select>
+          <div class="row">
+            <div class="col-6 col-lg-12 col-md-6">
+              <label class="col-sm-0 col-form-label">No. De Cuenta Banreservas:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="cuenta" id="cuenta" value="{{cuenta}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa un numero de cuenta
                 </div>
-                </div>
+              </div>
             </div>
-        </div>
-         --}}
-        <br><br>
-        <div class="text-lg-center">
-        <div class="g-recaptcha" data-sitekey="6Lc7Q7MUAAAAAL_yLBT4I7m-k09edUV97VjHoZT_" data-expired-callback="capcha_expired"  name="captcha "id="captcha" data-callback="verifyCaptcha" ></div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 col-lg-12 col-md-6">
+              <label class="col-sm-0 col-form-label">Finalidad del Prestamo:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="motivo" id="motivo" value="{{motivo}}" required="">
+                <div class="invalid-feedback">
+                  Escriba el motivo del prestamo
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {{!-- <div class="row justify-content-center">
+            <div class="col-6 col-sm-6 col-md-6">
+              <label class="col-12 col-sm-12 col-lg-12 col-form-label text-center">Selecione la Sucursal a enviar:</label>
+              <div class="row justify-content-center">
+                <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
+                  <select class="selectpicker" data-size="7" name="sucursal" data-style="select-with-transition"
+                    title="Single Select">
+                 <option value="" disabled selected>Seleccionar</option>
+                  <option value="Santo Domingo">Santo Domingo</option>
+                  <option value="Santiago">Santiago</option>
+                  <option value="Constanza">Constanza</option>
+                  <option value="San Francisco">San Francisco</option>
+                    <div class="invalid-feedback">
+                      Ingresa Estado Civil
+                    </div>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+          </div> --}}
+
+          {{!-- <div class="row">
+            <div class="col-12 col-lg-6 col-md-10 m-auto">
+              <label class="col-sm-12 text-center col-form-label">Deseo solicitar un Préstamo Gerencial por un monto
+                de:</label>
+              <div class="row col-12 col-lg-6 col-md-10 m-auto justify-content-center">
+                <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
+                  <select class="selectpicker" data-size="7" name="estadocivil" data-style="select-with-transition"
+                    title="Single Select">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="refinanciamiento">ES UN REFINANCIAMIENTO</option>
+                    <option value="1">RD$7,000</option>
+                    <option value="2">RD$8,000</option>
+                    <option value="3">RD$9,000</option>
+                    <option value="4">RD$10,000</option>
+                    <option value="5">RD$50,000</option>
+                    <option value="6"></option>
+                    <div class="invalid-feedback">
+                      Ingresa Estado Civil
+                    </div>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          --}}
+          <br><br>
+          {{!-- <div class="text-lg-center">
+            <div class="g-recaptcha" data-sitekey="6Lc7Q7MUAAAAAL_yLBT4I7m-k09edUV97VjHoZT_"
+              data-expired-callback="capcha_expired" name="captcha " id="captcha" data-callback="verifyCaptcha"></div>
             <div id="g-recaptcha-error"></div>
-            {{!-- </div> --}}
-        <br><br>
-      <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal" data-target="#myModal10">
-                        Enviar Solicitud
-                      </button>
-                       <!-- small modal -->
-                      <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-small">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Esta Seguro de Enviar la Solicitud</p>
-                            </div>
-                            <div class="modal-footer justify-content-center">
-                              <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
-                              <button type="submit" class="btn btn-success btn-link">Si
-                                <div class="ripple-container"></div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-      </form>
-    </div>
-    <div class="card-footer ">
+            
+          </div> --}}
+          <br><br>
+          <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal"
+            data-target="#myModal10">
+            Enviar Solicitud
+          </button>
+          <!-- small modal -->
+          <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-small">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
+                      class="material-icons">clear</i></button>
+                </div>
+                <div class="modal-body">
+                  <p>Esta Seguro de Enviar la Solicitud</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                  <button type="submit" class="btn btn-success btn-link">Si
+                    <div class="ripple-container"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer ">
+      </div>
     </div>
   </div>
-</div>
 </div>

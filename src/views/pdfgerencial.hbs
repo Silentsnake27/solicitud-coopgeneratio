@@ -159,66 +159,85 @@
       padding-right: 13px;
       padding-top: 13px;
    }
+
+   .condiciones{
+      margin-top: 3px;
+   }
 </style>
 
-<div class="container">
-   <div class="div-img">
+<div class="div-img">
 
-      <img class="img" src="http://img.fenixzone.net/i/TkCqP89.jpeg" alt="logo-registro-coopgeneratio" border="0">
+   <img class="img" src="http://imgfz.com/i/clnvZEB.jpeg" alt="logo-registro-coopgeneratio" border="0">
 
-   </div>
+</div>
 
-   {{!-- <label class="col-sm-0 col-form-label2">FECHA:</label>
-   <input class="form-control input-date" type="date" name="" id="fechaActual" value="" required=""> --}}
-
-
-   <div class="">
+{{!-- <label class="col-sm-0 col-form-label2">FECHA:</label>
+<input class="form-control input-date" type="date" name="" id="fechaActual" value="" required=""> --}}
 
 
-      <h3>SOLICITUD DE GERENCIAL</h3>
-      {{!-- <div class="row-p">
-
-         Por este medio solicito al Consejo de Administración ser admitido como socio de la Cooperativa de
-         Ahorro, Crédito y Servicios Múltiples GENERATIO NOVA “COOPGENERATIO”, para lo cual
-         me comprometo a cumplir con las disposiciones vigentes de los Estatutos y la Ley 127 sobre
-         asociaciones cooperativas y sus reglamentos.
-
-      </div> --}}
-      <br>
-
-   </div>
-   <div class="row">
-
-      <label class="col-sm-12 col-form-label4">Nombres:</label>
-      <input class="form-control" type="text" name="nombre" id="nombre" size="60" value="{{nombre}} {{apellido}}"
-         required="">
-
-      <label class="col-sm-12 col-form-label4">Apellidos:</label>
-      <input class="form-control" type="text" name="apellido" id="nombre" size="38" value="{{apellido}}" required="">
-
-   </div>
-   <div class="row">
-
-      <label class="col-sm-12 col-form-label4">Cédula:</label>
-      <input class="form-control" type="text" name="nombre" id="nombre" size="60" value="{{cedula}}" required="">
+<div class="">
 
 
-      <label class="col-sm-12 col-form-label4">Código:</label>
-      <input class="form-control" type="text" name="nombre" id="nombre" size="20" value="{{codigo}}" required="">
-   </div>
+   <h3>SOLICITUD DE GERENCIAL</h3>
+   {{!-- <div class="row-p">
 
-   <div class="row">
+      Por este medio solicito al Consejo de Administración ser admitido como socio de la Cooperativa de
+      Ahorro, Crédito y Servicios Múltiples GENERATIO NOVA “COOPGENERATIO”, para lo cual
+      me comprometo a cumplir con las disposiciones vigentes de los Estatutos y la Ley 127 sobre
+      asociaciones cooperativas y sus reglamentos.
+
+   </div> --}}
+   <br>
+
+</div>
+<div class="row">
+   <label class="col-sm-12 col-form-label4"><b>Datos del solicitante</b></label>
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Nombres:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="30" value="{{nombre}}" required="">
+
+   <label class="col-sm-12 col-form-label4">Apellidos:</label>
+   <input class="form-control" type="text" name="apellido" id="apellido" size="30" value="{{apellido}}" required="">
+
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Cédula:</label>
+   <input class="form-control" type="text" name="cedula" id="cedula" size="32" value="{{cedula}}" required="">
 
 
-      {{!-- </div> --}}
-   {{!-- <div class="row"> --}}
-      <label class="col-sm-12 col-form-label4">Celular:</label>
-      <input class="form-control" type="text" name="nombre" id="nombre" size="33" value="{{celular}}" required="">
+   <label class="col-sm-12 col-form-label4">Código:</label>
+   <input class="form-control" type="text" name="nombre" id="codigo" size="30" value="{{codigo}}" required="">
+</div>
 
-      {{!-- <label class="col-sm-12 col-form-label4">Telefonos:</label>
-      <input class="form-control" type="text" name="nombre" id="nombre" size="24" value="{{telefonos}}" required="">
-      --}}
+<div class="row">
 
-   </div>
+
+   {{!-- </div> --}}
+{{!-- <div class="row"> --}}
+   <label class="col-sm-12 col-form-label4">Celular:</label>
+   <input class="form-control" type="text" name="celular" id="celular" size="85" value="{{celular}}" required="">
+
+   {{!-- <label class="col-sm-12 col-form-label4">Telefonos:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="24" value="{{telefonos}}" required="">
+   --}}
+</div>
+<div class="row condiciones">
+   <label class="col-sm-12 col-form-label4"><b>Condiciones del servicio</b></label>
+</div>
+
+<div class="row">
+   <label class="col-sm-12 col-form-label4">Monto solicitado RD$:</label>
+   <input class="form-control" type="text" name="monto" id="monto" size="30" value="{{monto}}" required="">
+
+   <label class="col-sm-12 col-form-label4">Tiempo:</label>
+   <input class="form-control" type="text" name="plazo" id="plazo" size="30" value="{{plazo}}" required="">
+</div>
+
+<div class="row">
+   <label class="col-sm-12 col-form-label4">Finalidad:</label>
+   <input class="form-control" type="text" name="motivo" id="finalidad" size="85" value="{{motivo}}" required="">
 </div>
 {{!-- heroku version --}}

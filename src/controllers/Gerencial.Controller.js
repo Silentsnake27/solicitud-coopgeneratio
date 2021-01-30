@@ -10,22 +10,22 @@ import path from "path";
 import mail from "../config/Email";
 
 export async function GerencialController(req, res) {
-  const captcha = req.body["g-recaptcha-response"];
-  // Secret Key
-  const secretKey = "6Lc7Q7MUAAAAAOiHyEwkMOxgJvSv1sF9avSLEOs6";
-  // Verify URL
-  var verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}&remoteip=${req.connection.remoteAddress}`;
+  // const captcha = req.body["g-recaptcha-response"];
+  // // Secret Key
+  // const secretKey = "6Lc7Q7MUAAAAAOiHyEwkMOxgJvSv1sF9avSLEOs6";
+  // // Verify URL
+  // var verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}&remoteip=${req.connection.remoteAddress}`;
 
-  // Make Request To VerifyURL
-  request(verifyURL, (err, response, body) => {
-    body = JSON.parse(body);
-    // console.log(body);
+  // // Make Request To VerifyURL
+  // request(verifyURL, (err, response, body) => {
+  //   body = JSON.parse(body);
+  //   // console.log(body);
 
-    // if not successful
-    if (body.success !== undefined && !body.success) {
-      console.log("FaileCaptcha");
-    }
-  });
+  //   // if not successful
+  //   if (body.success !== undefined && !body.success) {
+  //     console.log("FaileCaptcha");
+  //   }
+  // });
 
     const { nombre, apellido, cedula, codigo, celular, monto, plazo, cuenta } = req.body;
     console.log(req.body);
@@ -103,7 +103,8 @@ export async function GerencialController(req, res) {
       celular,
       monto,
       plazo,
-      cuenta
+      cuenta,
+      motivo
     });
   } else {
     // // Look for cedula coincidence
