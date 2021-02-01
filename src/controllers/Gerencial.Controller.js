@@ -38,6 +38,7 @@ export async function GerencialController(req, res) {
     cuenta,
     motivo,
     sucursal,
+    terminos,
   } = req.body;
   console.log(req.body);
 
@@ -114,6 +115,12 @@ export async function GerencialController(req, res) {
     });
   }
 
+  if (!sucursal) {
+    errors.push({
+      text: "El Monto es necesario",
+    });
+  }
+
   //errors validations
   if (errors.length > 0) {
     res.render("form", {
@@ -129,6 +136,7 @@ export async function GerencialController(req, res) {
       cuenta,
       motivo,
       sucursal,
+      terminos,
     });
   } else {
     // // Look for cedula coincidence
