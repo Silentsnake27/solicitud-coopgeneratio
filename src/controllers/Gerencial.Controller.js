@@ -120,7 +120,7 @@ export async function GerencialController(req, res) {
       errors,
       nombre,
       apellido,
-      estadocivil,
+      // estadocivil,
       cedula,
       codigo,
       celular,
