@@ -9,7 +9,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _dotenv.default.config();
 
 module.exports = function (req, res, next) {
-  if (req.path != '/login' && req.path != '/signup' && req.path != '/' && req.path != '/form' && req.path != '/logout' && req.path != '/adminlogin') {
+  if (req.path != '/login' && req.path != '/signup' && req.path != '/' && req.path != '/form' && req.path != '/gerencial' && req.path != '/logout' && req.path != '/adminlogin') {
     if (req.cookies['SystemAuth']) {
       // creo la estrategia para el token 
       var token = req.cookies['SystemAuth'];

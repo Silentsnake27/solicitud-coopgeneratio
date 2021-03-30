@@ -65,7 +65,7 @@ const SolicitudGerencial = async function (req, res) {
     from: process.env.MAIL_USER,
     //Destino del correo
     to: `${DestinoSucursal.Email_Oficina}`,
-    subject: `Solicitud Gerencial ${nombre}`,
+    subject: `Solicitud Gerencial ${nombre} ${apellido}`,
     text: `Nueva solicitud de gerencial de parte de ${nombre} ${apellido}`,
     attachments: [
       {

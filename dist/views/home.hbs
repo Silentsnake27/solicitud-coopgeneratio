@@ -1,50 +1,45 @@
-<style type="text/css">  body{   background-image: url('/img/login3.jpg');  background-position:center;  background-repeat:repeat;  background-attachment:fixed;  }   </style>
+<div class="container">
 
+  {{#if admin}}
 
+  <div class="row justify-content-center">
+    <div class="col-lg-6 cards">
 
-
-
-
- {{#if admin}}
-
-    <div class="row justify-content-center">
- <div class="col-lg-6 cards">
-
-                  <div class="card card-pricing card-raised">
-                    <div class="card-body">
-                      <h6 class="card-category">Coopgeneratio Nova</h6>
-                      <div class="card-icon icon-success">
-                        <i class="material-icons">search</i>
-                      </div>
-                      <h3 class="card-title">Buscar solicitudes</h3>
-                      {{!-- <p class="card-description">
-                        This is good if your company size is between 2 and 10 Persons.
-                      </p> --}}
-                      <a href="/buscador" class="btn btn-green btn-round">Ir al buscador</a>
-                    </div>
-                  </div>
-                </div>
+      <div class="card card-pricing card-raised">
+        <div class="card-body">
+          <h6 class="card-category">Coopgeneratio Nova</h6>
+          <div class="card-icon icon-success">
+            <i class="material-icons">search</i>
+          </div>
+          <h3 class="card-title">Buscar solicitudes</h3>
+          {{!-- <p class="card-description">
+            This is good if your company size is between 2 and 10 Persons.
+          </p> --}}
+          <a href="/buscador" class="btn btn-green btn-round">Ir al buscador</a>
+        </div>
       </div>
+    </div>
+  </div>
   {{else}}
- <div class="row justify-content-center">
- <div class="col-lg-6 cards">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 cards">
 
-                  <div class="card card-pricing card-raised">
-                    <div class="card-body">
-                      <h6 class="card-category">Coopgeneratio Nova</h6>
-                      <div class="card-icon icon-success">
-                        <i class="material-icons">supervised_user_circle</i>
-                      </div>
-                      <h3 class="card-title">Hacerse Socio</h3>
-                      {{!-- <p class="card-description">
-                        This is good if your company size is between 2 and 10 Persons.
-                      </p> --}}
-                      <a href="/form" class="btn btn-green btn-round">Solicitar</a>
-                    </div>
-                  </div>
-                </div>
+      <div class="card card-pricing card-raised">
+        <div class="card-body">
+          <h6 class="card-category">Coopgeneratio Nova</h6>
+          <div class="card-icon icon-success">
+            <i class="material-icons">supervised_user_circle</i>
+          </div>
+          <h3 class="card-title">Hacerse Socio</h3>
+          {{!-- <p class="card-description">
+            This is good if your company size is between 2 and 10 Persons.
+          </p> --}}
+          <a href="/form" class="btn btn-green btn-round">Solicitar</a>
+        </div>
       </div>
+    </div>
+  </div>
 
   {{/if}}
 
-     
+</div>

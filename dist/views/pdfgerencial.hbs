@@ -1,0 +1,260 @@
+<style type="text/css">
+   body {
+      color: rgb(25, 68, 90);
+      margin: 0;
+      padding: 0;
+   }
+
+   a {
+      color: rgb(0, 26, 255);
+   }
+
+
+   .form-control {
+      border: none;
+      border-bottom: 0.9px solid;
+      color: rgb(25, 68, 90);
+      border-color: rgb(25, 68, 90);
+      font-size: 0.8rem;
+
+   }
+
+   .form-control2 {
+      border: none;
+      border-bottom: 0.9px solid;
+      margin-left: 31%;
+      color: rgb(25, 68, 90);
+      border-color: rgb(25, 68, 90);
+
+   }
+
+      {
+         {
+          !-- .form-control1 {
+            border: none;
+            border-bottom: 1px solid;
+
+            color: rgb(25, 68, 90);
+            border-color: rgb(25, 68, 90);
+         }
+
+         --
+      }
+   }
+
+   h3 {
+      color: rgb(25, 68, 90);
+      margin: 18px;
+      font-size: 17px;
+      text-align: center;
+      text-transform: uppercase;
+
+   }
+
+   p {
+      text-align: center;
+      width: 77%;
+      margin: auto;
+      font-size: 0.9rem;
+   }
+
+   .p-footer {
+      text-align: center;
+      width: 80%;
+      margin: auto;
+      font-size: 0.8rem;
+      padding-top: 30px;
+   }
+
+   .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 77%;
+      padding-left: 100px;
+   }
+
+   .row-p {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      padding-left: 102px;
+      font-size: 0.8rem;
+      padding-bottom: 3px;
+   }
+
+   .row-p1 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 77%;
+      padding-left: 100px;
+      font-size: 0.8rem;
+      padding-bottom: 3px;
+   }
+
+   .row-p2 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      padding-left: 100px;
+      font-size: 0.8rem;
+
+         {
+            {
+             !-- padding-bottom: 3px;
+            --
+         }
+      }
+   }
+
+
+
+   label {
+      font-size: 0.8rem;
+      padding-left: 0.2rem;
+   }
+
+   .input-date {
+      margin-top: 20px;
+      margin-bottom: 4px;
+
+   }
+
+   .col-form-label1 {
+      width: 77%;
+      padding-left: 100px;
+   }
+
+   .col-form-label2 {
+      padding-left: 501px;
+
+   }
+
+   .col-form-label4 {
+      padding-right: 0.4rem;
+
+   }
+
+   .col-form-label5 {
+
+      padding-left: 36%;
+   }
+
+   .div-img {
+         {
+            {
+             !-- background: gray;
+            --
+         }
+      }
+
+      width: 100%;
+   }
+
+   img {
+      width: 88%;
+      height: auto;
+      margin: auto;
+      display: block;
+      padding-left: 23px;
+      padding-right: 13px;
+      padding-top: 13px;
+   }
+
+   .condiciones {
+      margin-top: 3px;
+   }
+</style>
+
+<div class="div-img">
+
+   <img class="img" src="http://imgfz.com/i/clnvZEB.jpeg" alt="logo-registro-coopgeneratio" border="0">
+
+</div>
+
+{{!-- <label class="col-sm-0 col-form-label2">FECHA:</label>
+<input class="form-control input-date" type="date" name="" id="fechaActual" value="" required=""> --}}
+
+
+<div class="">
+
+
+   <h3>SOLICITUD DE PRÉSTAMO EN LÍNEA</h3>
+   {{!-- <div class="row-p">
+
+      Por este medio solicito al Consejo de Administración ser admitido como socio de la Cooperativa de
+      Ahorro, Crédito y Servicios Múltiples GENERATIO NOVA “COOPGENERATIO”, para lo cual
+      me comprometo a cumplir con las disposiciones vigentes de los Estatutos y la Ley 127 sobre
+      asociaciones cooperativas y sus reglamentos.
+
+   </div> --}}
+   <br>
+
+</div>
+<div class="row">
+   <label class="col-sm-12 col-form-label4"><b>Datos del solicitante</b></label>
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Nombres:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="30" value="{{nombre}}" required="">
+
+   <label class="col-sm-12 col-form-label4">Apellidos:</label>
+   <input class="form-control" type="text" name="apellido" id="apellido" size="26" value="{{apellido}}" required="">
+
+</div>
+<div class="row">
+
+   <label class="col-sm-12 col-form-label4">Cédula:</label>
+   <input class="form-control" type="text" name="cedula" id="cedula" size="16" value="{{cedula}}" required="">
+
+
+   <label class="col-sm-12 col-form-label4">Código:</label>
+   <input class="form-control" type="text" name="codigo" id="codigo" size="15" value="{{codigo}}" required="">
+
+   <label class="col-sm-12 col-form-label4">Cuenta:</label>
+   <input class="form-control" type="text" name="cuenta" id="cuenta" size="16" value="{{cuenta}}" required="">
+</div>
+
+<div class="row">
+
+
+   {{!-- </div> --}}
+{{!-- <div class="row"> --}}
+   <label class="col-sm-12 col-form-label4">Celular:</label>
+   <input class="form-control" type="text" name="celular" id="celular" size="76" value="{{celular}}" required="">
+
+   {{!-- <label class="col-sm-12 col-form-label4">Telefonos:</label>
+   <input class="form-control" type="text" name="nombre" id="nombre" size="24" value="{{telefonos}}" required="">
+   --}}
+</div>
+<div class="row condiciones">
+   <label class="col-sm-12 col-form-label4"><b>Condiciones del servicio</b></label>
+</div>
+
+<div class="row">
+   <label class="col-sm-12 col-form-label4">Monto solicitado RD$:</label>
+   <input class="form-control" type="text" name="monto" id="monto" size="25" value="{{monto}}" required="">
+
+   <label class="col-sm-12 col-form-label4">Tiempo:</label>
+   <input class="form-control" type="text" name="plazo" id="plazo" size="25" value="{{plazo}}" required="">
+</div>
+
+<div class="row">
+   <label class="col-sm-12 col-form-label4">Finalidad:</label>
+   <input class="form-control" type="text" name="motivo" id="finalidad" size="76" value="{{motivo}}" required="">
+</div>
+<br>
+<div class="row-p1 text-align-center" style="font-size: 13px; color:black">
+
+   Yo ACUERDO, ME COMPROMETO y ME OBLIGO
+   a pagar
+   y reconocer como deuda los depósitos realizados desde la cuenta de la Cooperativa de Ahorro, Crédito y
+   Servicio Múltiples “Generatio Nova" COOPGENERATIO, Inc., a la Cuenta del Banco supraindicado.
+</div>
+
+<p class="p-footer">Calle Santo Tomas de Aquino, No.51, Edif. FEDORA LC.1-A, casi Esq. Santiago, Zona Universitaria,
+   Santo Domingo,
+   Distrito Nacional, Tel: (809) 622-3897 | <a href="coopgeneratio1512@gmail.com">coopgeneratio1512@gmail.com</a></p>
+
+{{!-- heroku version --}}
+{{!-- heroku version --}}

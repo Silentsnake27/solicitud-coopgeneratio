@@ -1,174 +1,182 @@
-<style type="text/css">  body{   background-image: url('/img/login3.jpg');  background-position:center;  background-repeat:repeat;  background-attachment:fixed;  }  </style>
+<div class="container">
 
-
-
-<div class=" col-auto col-md-auto col-lg-12">
-  <div class="card ">
-    <div class="card-header card-header-rose card-header-icon">
-      <div class="card-icon1">
-        <i class="material-icons">contacts</i>
-      </div>
-      <h4 class="card-title">Solicitud Socio</h4>
-    </div>
-    <div class="card-body ">
-      <form action="/form" class="form-horizontal" id="needs-validation" novalidate method="POST" onsubmit="return submitUserForm();">
-       <div class="row">
-          <div class="col-6 col-lg-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Nombres:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="nombre" id="nombre" minlength="3" value="{{nombre}}" required="">
-               <div class="invalid-feedback">
-        Ingresa un Nombre
-      </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Apellidos:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="apellido" id="apellido" class="form-control" minlength="3" value="{{apellido}}" placeholder="" required="">
-               <div class="invalid-feedback">
-        Ingresa un apellido
-      </div>
-            </div>
-          </div>
+  <div class=" col-auto col-md-auto col-lg-12">
+    <div class="card ">
+      <div class="card-header card-header-rose card-header-icon">
+        <div class="card-icon1">
+          <i class="material-icons">contacts</i>
         </div>
-        <div class="row">
-          <div class="col-6 col-lg-4">
-            <label class="col-auto col-md-auto col-sm-auto col-form-label">Cédula</label>
-            <div class="form-group">
-              <input class="form-control" type="text" id="cedula" name="cedula" value="{{cedula}}" required="">
-               <div class="invalid-feedback">
-        Ingresa la Cedula
+        <h4 class="card-title">Solicitud Socio</h4>
       </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6">
-            <label class="col-auto col-sm-auto col-lg-auto col-form-label">Estado Civil:</label>
-            <div class="row">
-              <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
-                <select class="selectpicker" data-size="7" name="estadocivil" data-style="select-with-transition"
-                  title="Single Select">
-                  <option value="" disabled selected>Seleccionar</option>
-                  <option value="Soltero">Soltero</option>
-                  <option value="Casado">Casado</option>
+      <div class="card-body ">
+        <form action="/form" class="form-horizontal" id="needs-validation" novalidate method="POST"
+          onsubmit="return submitUserForm();">
+          <div class="row">
+            <div class="col-6 col-lg-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Nombres:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="nombre" id="nombre" minlength="3" value="{{nombre}}"
+                  required="">
                 <div class="invalid-feedback">
-                  Ingresa Estado Civil
+                  Ingresa un Nombre
                 </div>
-                </select>
-                  
+              </div>
+            </div>
+            <div class="col-6 col-lg-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Apellidos:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="apellido" id="apellido" class="form-control" minlength="3" value="{{apellido}}"
+                  placeholder="" required="">
+                <div class="invalid-feedback">
+                  Ingresa un apellido
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-8 col-sm-8 col-md-8">
-            <label>Dirección Residencial:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="direccionresidencial" class="form-control" minlength="3" value="{{direccionresidencial}}" required=""
-                placeholder="">
-                  <div class="invalid-feedback">
-        Ingresa una Dirección
-      </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-lg-4 col-sm-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Provincia:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="provincia" class="form-control" minlength="3" value="{{provincia}}" required=""
-                placeholder="">
-                  <div class="invalid-feedback">
-        Ingresa una provincia
-      </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <label class="col-sm-0 col-form-label">Teléfonos:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" id="telefonos" name="telefonos" value="{{telefonos}}" required="">
+          <div class="row">
+            <div class="col-6 col-lg-4">
+              <label class="col-auto col-md-auto col-sm-auto col-form-label">Cédula</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="cedula" name="cedula" value="{{cedula}}" required="">
                 <div class="invalid-feedback">
-        Ingresa un telefono
-      </div>
+                  Ingresa la Cedula
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6">
+              <label class="col-auto col-sm-auto col-lg-auto col-form-label">Estado Civil:</label>
+              <div class="row">
+                <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
+                  <select class="selectpicker" data-size="7" name="estadocivil" data-style="select-with-transition"
+                    title="Single Select">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Casado">Casado</option>
+                    <div class="invalid-feedback">
+                      Ingresa Estado Civil
+                    </div>
+                  </select>
+
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-lg-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Célular:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="celular" id="celular" value="{{celular}}" required="">
+          <div class="row">
+            <div class="col-12 col-lg-8 col-sm-8 col-md-8">
+              <label>Dirección Residencial:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="direccionresidencial" class="form-control" minlength="3"
+                  value="{{direccionresidencial}}" required="" placeholder="">
                 <div class="invalid-feedback">
-        Ingresa un Célular
-      </div>
+                  Ingresa una Dirección
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Oficina de Trabajo:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="oficinatrabajo" class="form-control" minlength="3" value="{{oficinatrabajo}}" placeholder="" required="">
-               <div class="invalid-feedback">
-        Ingresa una Dirección
-      </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Dirección Trabajo:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="direcciontrabajo" minlength="3"  value="{{direcciontrabajo}}" required="">
+          <div class="row">
+            <div class="col-6 col-lg-4 col-sm-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Provincia:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="provincia" class="form-control" minlength="3" value="{{provincia}}" required=""
+                  placeholder="">
                 <div class="invalid-feedback">
-        Ingresa la Dirección de Trabajo
-      </div>
+                  Ingresa una provincia
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Telefono Trabajo:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="telefonotrabajo" id="telefonotrabajo" class="form-control" value="{{telefonotrabajo}}" placeholder="" required="">
+            <div class="col-6 col-md-4">
+              <label class="col-sm-0 col-form-label">Teléfonos:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="telefonos" name="telefonos" value="{{telefonos}}"
+                  required="">
                 <div class="invalid-feedback">
-        Ingresa un Telefono de Trabajo
-      </div>
+                  Ingresa un telefono
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Fecha de Ingreso Empresa:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="fechaingresoempresa" class="form-control" minlength="3" value="{{fechaingresoempresa}}" placeholder="" required="">
-               <div class="invalid-feedback">
-        Ingresa una Fecha
-      </div>
+          <div class="row">
+            <div class="col-6 col-lg-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Célular:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="celular" id="celular" value="{{celular}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa un Célular
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Oficina de Trabajo:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="oficinatrabajo" class="form-control" minlength="3" value="{{oficinatrabajo}}"
+                  placeholder="" required="">
+                <div class="invalid-feedback">
+                  Ingresa una Dirección
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-         
-        <div class="row">
+          <div class="row">
+            <div class="col-6 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Dirección Trabajo:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="direcciontrabajo" minlength="3"
+                  value="{{direcciontrabajo}}" required="">
+                <div class="invalid-feedback">
+                  Ingresa la Dirección de Trabajo
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Telefono Trabajo:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="telefonotrabajo" id="telefonotrabajo" class="form-control"
+                  value="{{telefonotrabajo}}" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Ingresa un Telefono de Trabajo
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Fecha de Ingreso Empresa:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="fechaingresoempresa" class="form-control" minlength="3"
+                  value="{{fechaingresoempresa}}" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Ingresa una Fecha
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
             <div class="col-4 col-md-3 col-lg-3 col-sm-3">
               <label class="col-sm-0 col-form-label">Fax:</label>
               <div class="form-group bmd-form-group">
-                <input type="text" name="fax" class="form-control" value="{{fax}}"  placeholder="Opcional">
+                <input type="text" name="fax" class="form-control" value="{{fax}}" placeholder="Opcional">
 
               </div>
             </div>
-             <div class="col-4 col-md-3 col-lg-3 col-sm-3">
+            <div class="col-4 col-md-3 col-lg-3 col-sm-3">
               <label class="col-sm-0 col-form-label">Puesto:</label>
               <div class="form-group bmd-form-group">
-                <input type="text" name="puesto" class="form-control" minlength="3" value="{{puesto}}"  placeholder="" required="">
+                <input type="text" name="puesto" class="form-control" minlength="3" value="{{puesto}}" placeholder=""
+                  required="">
 
-                  <div class="invalid-feedback">
-        Ingresa un Puesto de Trabajo
-      </div>
+                <div class="invalid-feedback">
+                  Ingresa un Puesto de Trabajo
+                </div>
               </div>
             </div>
-             <div class="col-4 col-md-3 col-lg-3 col-sm-3">
+            <div class="col-4 col-md-3 col-lg-3 col-sm-3">
               <label class="col-sm-0 col-form-label">Sueldo:</label>
               <div class="form-group bmd-form-group">
-                <input type="text" name="sueldo" id="sueldo" class="form-control" value="{{sueldo}}" placeholder="" required="">
+                <input type="text" name="sueldo" id="sueldo" class="form-control" value="{{sueldo}}" placeholder=""
+                  required="">
 
-                  <div class="invalid-feedback">
-        Ingresa un Sueldo
-      </div>
+                <div class="invalid-feedback">
+                  Ingresa un Sueldo
+                </div>
               </div>
             </div>
           </div>
@@ -176,132 +184,152 @@
             <div class="col-12 col-md-8 col-lg-8  col-sm-8">
               <label class="col-sm-0 col-form-label">Correo Electrónico:</label>
               <div class="form-group bmd-form-group">
-                 <input class="form-control" type="email" name="email" minlength="5" value="{{email}}"  placeholder="Opcional" >
-                   {{!-- <div class="invalid-feedback">
-        Ingresa un Correo Electrónico
-      </div> --}}
+                <input class="form-control" type="email" name="email" minlength="5" value="{{email}}"
+                  placeholder="Opcional">
+                {{!-- <div class="invalid-feedback">
+                  Ingresa un Correo Electrónico
+                </div> --}}
               </div>
             </div>
           </div>
-          
+
           <br>
           <br>
-         
-         <h6><p>De ser admitido me comprometo a cumplir con los compromisos tales como: Ahorro Mensual de:</p></h6> 
-         
+
+          <h6>
+            <p>De ser admitido me comprometo a cumplir con los compromisos tales como: Ahorro Mensual de:</p>
+          </h6>
+
           <div class="row">
             <div class="col-12 col-md-3 col-lg-3  col-sm-3">
               <label class="col-sm-0 col-form-label">RD$:</label>
               <div class="form-group bmd-form-group">
-                 <input class="form-control" type="text" id="ahorromensual" name="ahorromensual" value="{{ahorromensual}}" required="" >
-                 <div class="invalid-feedback">
-        Ingrese Valor de Ahorro Mensual
-      </div>
+                <input class="form-control" type="text" id="ahorromensual" name="ahorromensual"
+                  value="{{ahorromensual}}" required="">
+                <div class="invalid-feedback">
+                  Ingrese Valor de Ahorro Mensual
+                </div>
               </div>
             </div>
           </div>
-           <div class="row">
-          <div class="col-6 col-lg-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Número Certificados de Aportación:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="certificadoaportacion" value="{{certificadoaportacion}}"  placeholder="Opcional">
-              {{!-- <div class="invalid-feedback">
-        Ingrese un Certificado de Aportación
-      </div> --}}
+          <div class="row">
+            <div class="col-6 col-lg-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Número Certificados de Aportación:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="certificadoaportacion" value="{{certificadoaportacion}}"
+                  placeholder="Opcional">
+                {{!-- <div class="invalid-feedback">
+                  Ingrese un Certificado de Aportación
+                </div> --}}
+              </div>
+            </div>
+            <div class="col-6 col-lg-4 col-md-4">
+              <label class="col-sm-0 col-form-label">Certificado de aportación por un valor de RD$:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="valorcertificado" class="form-control" value="{{valorcertificado}}"
+                  placeholder="Opcional">
+                {{!-- <div class="invalid-feedback">
+                  Ingrese el valor de Certificado de Aportación
+                </div> --}}
+              </div>
             </div>
           </div>
-          <div class="col-6 col-lg-4 col-md-4">
-            <label class="col-sm-0 col-form-label">Certificado de aportación por un valor de RD$:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="valorcertificado" class="form-control" value="{{valorcertificado}}" placeholder="Opcional" >
-              {{!-- <div class="invalid-feedback">
-        Ingrese el valor de Certificado de Aportación
-      </div> --}}
-            </div>
-          </div>
-        </div>
- <br>
           <br>
-         <h6><p>En caso de fallecimiento y otro problema de incapacidad entregar mis ahorros a:</p></h6> 
-         <div class="row">
-          <div class="col-6 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Nombres:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="nombre2" minlength="3" value="{{nombre2}}" required="">
-              <div class="invalid-feedback">
-        Ingrese un Nombre
-      </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Apellidos:</label>
-            <div class="form-group">
-              <input class="form-control" type="text" name="apellido2" minlength="3" value="{{apellido2}}" required="">
-              <div class="invalid-feedback">
-        Ingrese un Apellido
-      </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-4">
-            <label class="col-sm-0 col-form-label">Cédula:</label>
-            <div class="form-group bmd-form-group">
-              <input type="text" name="cedula2" id="cedula2" class="form-control" value="{{cedula2}}" placeholder="" required="">
-              <div class="invalid-feedback">
-        Ingrese una cedula
-      </div>
-            </div>
-          </div>
-        </div>
-        <br>
           <br>
-         <h6><p>A continuación elija la Sucursal por donde pasara a firmar la Solicitud:</p></h6> 
-       <div class="row">
-              <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
-                <select class="selectpicker" data-size="7" name="sucursal" data-style="select-with-transition"
-                  title="Single Select" required="">
-                 <option value="" disabled selected>Seleccionar</option>
-                  <option value="Santo Domingo">Santo Domingo</option>
-                  <option value="Santiago">Santiago</option>
-                  <option value="Constanza">Constanza</option>
-                  <option value="San Francisco">San Francisco</option>
+          <h6>
+            <p>En caso de fallecimiento y otro problema de incapacidad entregar mis ahorros a:</p>
+          </h6>
+          <div class="row">
+            <div class="col-6 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Nombres:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="nombre2" minlength="3" value="{{nombre2}}" required="">
+                <div class="invalid-feedback">
+                  Ingrese un Nombre
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Apellidos:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" name="apellido2" minlength="3" value="{{apellido2}}"
+                  required="">
+                <div class="invalid-feedback">
+                  Ingrese un Apellido
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-4">
+              <label class="col-sm-0 col-form-label">Cédula:</label>
+              <div class="form-group bmd-form-group">
+                <input type="text" name="cedula2" id="cedula2" class="form-control" value="{{cedula2}}" placeholder=""
+                  required="">
+                <div class="invalid-feedback">
+                  Ingrese una cedula
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <h6>
+            <p>A continuación elija la Sucursal por donde pasara a firmar la Solicitud:</p>
+          </h6>
+          <div class="row">
+            <div class=" col-12 col-sm-12 col-lg-auto col-md-12 mt-lg-1">
+              <select class="selectpicker" data-size="7" name="sucursal" data-style="select-with-transition"
+                title="Single Select" required="">
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="Santo Domingo">Santo Domingo</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Constanza">Constanza</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Puerto Plata">Puerto Plata</option>
                 <div class="invalid-feedback">
                   Seleccione una Sucursal
-                </select>
-                  
+              </select>
+
+            </div>
+          </div>
+
+          <br><br>
+          <div class="text-lg-center">
+            <div class="g-recaptcha" data-sitekey="6Lc7Q7MUAAAAAL_yLBT4I7m-k09edUV97VjHoZT_"
+              data-expired-callback="capcha_expired" name="captcha " id="captcha" data-callback="verifyCaptcha"></div>
+            <div id="g-recaptcha-error"></div>
+            {{!--
+          </div> --}}
+          <br><br>
+          <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal"
+            data-target="#myModal10">
+            Enviar Solicitud
+          </button>
+          <!-- small modal -->
+          <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-small">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
+                      class="material-icons">clear</i></button>
+                </div>
+                <div class="modal-body">
+                  <p>Esta Seguro de Enviar la Solicitud</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
+                  <button type="submit" class="btn btn-success btn-link">Si
+                    <div class="ripple-container"></div>
+                  </button>
+                </div>
               </div>
             </div>
-        
-        <br><br>
-        <div class="text-lg-center">
-        <div class="g-recaptcha" data-sitekey="6Lc7Q7MUAAAAAL_yLBT4I7m-k09edUV97VjHoZT_" data-expired-callback="capcha_expired"  name="captcha "id="captcha" data-callback="verifyCaptcha" ></div>
-            <div id="g-recaptcha-error"></div>
-            {{!-- </div> --}}
-        <br><br>
-      <button type="button" class="btn btn-green btn-round col text-center" data-toggle="modal" data-target="#myModal10">
-                        Enviar Solicitud
-                      </button>
-                       <!-- small modal -->
-                      <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-small">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Esta Seguro de Enviar la Solicitud</p>
-                            </div>
-                            <div class="modal-footer justify-content-center">
-                              <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
-                              <button type="submit" class="btn btn-success btn-link">Si
-                                <div class="ripple-container"></div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-      </form>
-    </div>
-    <div class="card-footer ">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer ">
+      </div>
     </div>
   </div>
+
 </div>

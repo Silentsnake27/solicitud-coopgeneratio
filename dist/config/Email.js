@@ -68,6 +68,48 @@ const SolicitudSucursal = async function (req, res) {
 
     _fsExtra.default.unlink(filePath);
   });
+}; // Function para solicitud de gerencial
+
+
+const SolicitudGerencial = async function (req, res) {
+  const {
+    nombre,
+    apellido,
+    cedula,
+    sucursal
+  } = req.body; //envio de email
+
+  const DestinoSucursal = await _Oficinas.default.findOne({
+    where: {
+      oficina: sucursal
+    }
+  }); //Opciones envio email
+
+  const mailOptions = {
+    from: process.env.MAIL_USER,
+    //Destino del correo
+    to: `${DestinoSucursal.Email_Oficina}`,
+    subject: `Solicitud Gerencial ${nombre} ${apellido}`,
+    text: `Nueva solicitud de gerencial de parte de ${nombre} ${apellido}`,
+    attachments: [{
+      filename: `${cedula}.pdf`,
+      path: _path.default.join(__dirname, `../../${nombre}.pdf`),
+      contentType: "application/pdf"
+    }]
+  }; //Envio del mail
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    //validar que haya habido un error
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+
+    const filePath = _path.default.join(__dirname, `../../${nombre}.pdf`);
+
+    _fsExtra.default.unlink(filePath);
+  });
 }; // Function para Mail de confirmación de solicitud
 
 
@@ -118,5 +160,6 @@ async function solicitudmail(req, res, user) {
 }
 
 module.exports = {
-  SolicitudSucursal
+  SolicitudSucursal,
+  SolicitudGerencial
 };
