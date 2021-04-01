@@ -259,7 +259,7 @@ export async function savesocioDB(req, res) {
 
         try {
           const browser = await puppeteer.launch({
-            args: ['--no-sandbox','--disable-setuid-sandbox',],
+            ignoreDefaultArgs: ['--no-sandbox','--disable-setuid-sandbox',],
             // args: [`--window-size=${options.width},${options.height}`],
             // '--font-render-hinting=medium'
             headless: true
